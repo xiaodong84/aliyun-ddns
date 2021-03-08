@@ -93,8 +93,8 @@ const getPath = function (reqParams) {
 const updateRecord = (target, callback) => {
   const ip = target.ip;
   const subDomain = target.hostname;
-  const domainName = subDomain.split('.').slice(-2).join('.');
-  const rr = subDomain.split('.').slice(0, -2).join('.');
+  const domainName = subDomain.split('.').slice(-3).join('.');
+  const rr = subDomain.split('.').slice(0, -3).join('.');
   const describeSubParams = {
     Action: 'DescribeSubDomainRecords',
     SubDomain: subDomain
